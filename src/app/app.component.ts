@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular_proyect';
+  variable = "variable dinamica!";
+  h1 = "";
+
+  manejoEvento(str:string){
+      this.h1 = str;
+  }
 }
