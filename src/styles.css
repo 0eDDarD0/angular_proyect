@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input,select{
+    width: 100%;
+    font-size: 1rem;
+
+    background-color: transparent;
+    color: white;
+    outline: none;
+
+    border: none;
+    border-bottom: 2px solid white;
+}
+button{
+    padding: 0.5rem;
+
+    background-color: transparent;
+    color: white;
+    outline: none;
+    cursor: pointer;
+
+    border-bottom: 2px solid white;
+    border-radius: 10px;
+}

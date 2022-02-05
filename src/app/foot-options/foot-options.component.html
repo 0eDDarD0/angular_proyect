@@ -1,0 +1,15 @@
+<div id="footOptions">
+    <div class="upper">
+        <p>{{recuentoTotal()}} Notas</p>
+        <p>{{recuentoHechas()}} Hechas</p>
+        <p>Buscar:</p>
+        <input type="text" [(ngModel)]="busqueda" (keyup)="cambioModo('busqueda')">
+    </div>
+
+    <div class="lower">
+        <button (click)="cambioModo('todo')">Todas</button>
+        <button (click)="cambioModo('pendiente')">Pendientes</button>
+        <button (click)="cambioModo('terminada')">Completadas</button>
+        <button (click)="limpiar()">Borrar Completadas</button>
+    </div>
+</div>

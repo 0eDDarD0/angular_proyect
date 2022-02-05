@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NotaComponent } from './nota.component';
+import { HeadFormComponent } from './head-form.component';
 
-describe('NotaComponent', () => {
-  let component: NotaComponent;
-  let fixture: ComponentFixture<NotaComponent>;
+describe('HeadFormComponent', () => {
+  let component: HeadFormComponent;
+  let fixture: ComponentFixture<HeadFormComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NotaComponent ]
+      declarations: [ HeadFormComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NotaComponent);
+    fixture = TestBed.createComponent(HeadFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

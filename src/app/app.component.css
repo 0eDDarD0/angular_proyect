@@ -1,0 +1,75 @@
+#app{
+    font-family: 'Roboto', sans-serif;
+
+    height: 100vh;
+    padding: 2rem;
+
+    background-color: #DD0031;
+    color: white;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    justify-content: space-evenly;
+}
+
+.menu,.container{
+    background-color: rgb(34, 34, 34);
+    
+    border: white 2px solid;
+    border-radius: 20px;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu > *{
+    width: 100%;
+}
+.menu > *:nth-child(1){
+    height: 50%;
+}
+.menu > *:nth-child(2){
+    height: 20%;
+}
+
+
+/***** ESTILOS DE NOTAS *****/
+.container{
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0.5rem;
+
+    overflow-y: auto;
+}
+
+.nota{
+    padding: 1rem;
+
+    border: white 2px solid;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+.nota button{
+    background-color: rgb(34, 34, 34);
+}
+
+
+.completada{
+    text-decoration: line-through;
+
+    background-color: green;
+}
+.pendiente{
+    text-decoration: none;
+}

@@ -1,6 +1,27 @@
-<div>
-    <h1>{{h1}}</h1>
-    <app-nota estatico="fer" [dinamico]="variable" (miEvento)="manejoEvento($event)"></app-nota>
+<div id="app">
+    <div class="menu">
+        <app-head-form (crearNota)="crearNota()"></app-head-form>
+        <app-foot-options></app-foot-options>    
+    </div>
+
+    <div class="container">
+        <div [class]="nota.done ? 'completada' : 'pendiente'" class="nota" *ngFor="let nota of filtro()">
+            <div class="nota-content">
+                <h3>{{nota.titulo}}</h3>
+                <p class="nota_text">{{nota.descripcion}}</p>
+                <p>{{nota.fecha}} / Hace {{strMinutos(nota.minutos)}} minutos</p>
+                <br>
+                <button [style.background-color]="nota.prioridad == 1 ? '#C3002F' : 'rgb(34, 34, 34)'" (click)="cambioPrioridad(nota.id, 1)">Alta</button>
+                <button [style.background-color]="nota.prioridad == 2 ? '#C3002F' : 'rgb(34, 34, 34)'" (click)="cambioPrioridad(nota.id, 2)">Media</button>
+                <button [style.background-color]="nota.prioridad == 3 ? '#C3002F' : 'rgb(34, 34, 34)'" (click)="cambioPrioridad(nota.id, 3)">Baja</button>
+            </div>
+            <div class="nota-buttons">
+                <button (click)="cambioEstado(nota.id)">{{strEstado(nota.id)}}</button>
+                <button (click)="borrarNota(nota.id)">&times;</button>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 

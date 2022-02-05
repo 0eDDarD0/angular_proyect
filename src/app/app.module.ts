@@ -4,12 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NotaComponent } from './nota/nota.component';
+import { HeadFormComponent } from './head-form/head-form.component';
+import { FootOptionsComponent } from './foot-options/foot-options.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        NotaComponent
+        HeadFormComponent,
+        FootOptionsComponent
     ],
     imports: [
         BrowserModule,
