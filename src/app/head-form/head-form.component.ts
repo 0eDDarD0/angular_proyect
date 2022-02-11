@@ -26,13 +26,15 @@ export class HeadFormComponent implements OnInit {
 
     //FUNCION QUE CREA UNA NOTA
     create(){
-        this.servicio.titulo = this.titulo;
-        this.servicio.descripcion = this.descripcion;
-        this.servicio.prioridad = this.prioridad;
-
-        this.crearNota.emit();
-
-        this.titulo = "";
-        this.descripcion = "";
+        if(this.titulo){
+            this.servicio.titulo = this.titulo;
+            this.servicio.descripcion = this.descripcion;
+            this.servicio.prioridad = this.prioridad;
+    
+            this.crearNota.emit();
+    
+            this.titulo = "";
+            this.descripcion = "";
+        }
     }
 }
